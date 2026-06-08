@@ -1,0 +1,393 @@
+# Machine Learning Internship Tasks
+
+This repository contains a collection of machine learning tasks completed during the ML internship. The project covers the main steps of a practical ML workflow: data preprocessing, supervised learning, unsupervised learning, model evaluation, visualization, and a neural network implementation using TensorFlow/Keras.
+
+## Project Overview
+
+The repository is organized by task level. Each script focuses on one machine learning algorithm or workflow and uses datasets stored inside the `Data Set For Task` directory.
+
+Main topics covered:
+
+- Data cleaning and preprocessing
+- Feature scaling and categorical encoding
+- Regression models
+- Classification models
+- Clustering
+- Model evaluation with accuracy, precision, recall, F1-score, confusion matrices, and plots
+- Neural network classification with TensorFlow/Keras
+
+## Repository Structure
+
+```text
+ML-intern/
+|-- Data Set For Task/
+|   |-- 1) iris.csv
+|   |-- 2) Stock Prices Data Set.csv
+|   |-- 3) Sentiment dataset.csv
+|   |-- 4) house Prediction Data Set.csv
+|   `-- Churn Prdiction Data/
+|       |-- churn-bigml-20.csv
+|       `-- churn-bigml-80.csv
+|-- level1_task1_data_preprocessing.py
+|-- level1_task2_linear_regression.py
+|-- level1_task3_knn_classifier.py
+|-- level2_task1_logistic_regression.py
+|-- level2_task2_decision_tree_classification.py
+|-- level2_task3_kmeans_clustring.py
+|-- level3_task1_random_forest_classifier.py
+|-- level3_task2_svm_classification.py
+|-- level3_task3_neural_network_keras.py
+|-- *.png
+|-- LICENSE
+`-- readme
+```
+
+## Datasets Used
+
+| Dataset | File | Main Use |
+| --- | --- | --- |
+| Iris Dataset | `Data Set For Task/1) iris.csv` | Classification, KNN, preprocessing, neural network |
+| Stock Prices Dataset | `Data Set For Task/2) Stock Prices Data Set.csv` | Time-series or regression exploration |
+| Sentiment Dataset | `Data Set For Task/3) Sentiment dataset.csv` | Text/sentiment classification exploration |
+| House Prediction Dataset | `Data Set For Task/4) house Prediction Data Set.csv` | Linear regression |
+| Churn Dataset | `Data Set For Task/Churn Prdiction Data/churn-bigml-80.csv` | Logistic regression, decision tree, random forest, SVM |
+
+## Tasks
+
+### Level 1
+
+#### Task 1: Data Preprocessing
+
+File:
+
+```text
+level1_task1_data_preprocessing.py
+```
+
+This task loads the Iris dataset and applies basic preprocessing steps:
+
+- Checks dataset shape and data types
+- Detects missing values
+- Handles missing numeric values
+- Encodes categorical variables
+- Splits features and target values
+
+#### Task 2: Linear Regression
+
+File:
+
+```text
+level1_task2_linear_regression.py
+```
+
+This task uses the house prediction dataset to build a regression model.
+
+Main steps:
+
+- Loads the house prediction dataset
+- Handles missing values
+- Encodes categorical variables if needed
+- Splits the data into training and testing sets
+- Trains a Linear Regression model
+- Evaluates the model using regression metrics
+- Generates result visualizations
+
+Output:
+
+```text
+task2_linear_regression_results.png
+```
+
+#### Task 3: K-Nearest Neighbors Classifier
+
+File:
+
+```text
+level1_task3_knn_classifier.py
+```
+
+This task builds a KNN classification model using the Iris dataset.
+
+Main steps:
+
+- Loads and preprocesses the Iris dataset
+- Encodes the target class
+- Scales numeric features
+- Tests multiple K values
+- Trains the final KNN model
+- Evaluates classification performance
+
+Output:
+
+```text
+task3_knn_results.png
+```
+
+### Level 2
+
+#### Task 1: Logistic Regression
+
+File:
+
+```text
+level2_task1_logistic_regression.py
+```
+
+This task applies Logistic Regression to the churn dataset.
+
+Main steps:
+
+- Loads customer churn data
+- Detects the target variable
+- Handles categorical variables
+- Scales features
+- Trains a Logistic Regression model
+- Evaluates performance with classification metrics
+- Visualizes results
+
+Output:
+
+```text
+level2_task1_logistic_regression_results.png
+```
+
+#### Task 2: Decision Tree Classification
+
+File:
+
+```text
+level2_task2_decision_tree_classification.py
+```
+
+This task trains and evaluates Decision Tree classifiers on the churn dataset.
+
+Main steps:
+
+- Preprocesses customer churn data
+- Trains a full decision tree
+- Trains a pruned decision tree
+- Compares model performance
+- Visualizes the tree and evaluation results
+
+Outputs:
+
+```text
+level2_task2_evaluation_dashboard.png
+level2_task2_tree_full.png
+level2_task2_tree_pruned.png
+```
+
+#### Task 3: K-Means Clustering
+
+File:
+
+```text
+level2_task3_kmeans_clustring.py
+```
+
+This task applies unsupervised learning using K-Means clustering.
+
+Main steps:
+
+- Loads and preprocesses data
+- Scales numeric features
+- Uses the elbow method to choose a suitable number of clusters
+- Applies K-Means clustering
+- Visualizes clusters using PCA
+
+Outputs:
+
+```text
+level2_task3_kmeans_clustring_elbow_method.png
+level2_task3_kmeans_clustring_pca_visualization.png
+```
+
+### Level 3
+
+#### Task 1: Random Forest Classifier
+
+File:
+
+```text
+level3_task1_random_forest_classifier.py
+```
+
+This task builds a Random Forest classification model.
+
+Main steps:
+
+- Loads and preprocesses classification data
+- Trains a Random Forest model
+- Evaluates the model using classification metrics
+- Displays feature importance
+- Generates a confusion matrix
+
+Outputs:
+
+```text
+level3_task1_random_forest_confusion_matrix.png
+level3_task1_random_forest_feature_importance.png
+```
+
+#### Task 2: Support Vector Machine Classification
+
+File:
+
+```text
+level3_task2_svm_classification.py
+```
+
+This task applies Support Vector Machine classification.
+
+Main steps:
+
+- Loads and preprocesses data
+- Encodes categorical values
+- Scales features
+- Trains an SVM classifier
+- Evaluates classification results
+- Visualizes model performance
+
+Output:
+
+```text
+level3_task2_svm_results.png
+```
+
+#### Task 3: Neural Network with TensorFlow/Keras
+
+File:
+
+```text
+level3_task3_neural_network_keras.py
+```
+
+This task builds a simple feed-forward neural network for Iris flower classification using TensorFlow/Keras.
+
+Why the Iris dataset was selected:
+
+- It is a clean classification dataset.
+- It contains 4 numeric input features.
+- It contains 3 target classes: `setosa`, `versicolor`, and `virginica`.
+- It is suitable for a small fully connected neural network.
+
+Model architecture:
+
+```text
+Input layer: 4 features
+Hidden layer 1: Dense layer with 16 neurons and ReLU activation
+Hidden layer 2: Dense layer with 8 neurons and ReLU activation
+Output layer: Dense layer with 3 neurons and Softmax activation
+```
+
+Main steps:
+
+- Loads the Iris dataset
+- Separates features and target
+- Encodes the species labels
+- Scales the numeric features
+- Splits data into training and testing sets
+- Builds a Keras Sequential neural network
+- Trains the model using backpropagation
+- Evaluates test accuracy and test loss
+- Visualizes training/validation loss and accuracy
+- Makes sample predictions
+
+Example result:
+
+```text
+Test Accuracy: 0.8667
+Test Loss: 0.2818
+```
+
+## Installation
+
+It is recommended to use a virtual environment.
+
+### Windows
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install pandas numpy matplotlib seaborn scikit-learn tensorflow
+```
+
+### macOS/Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pandas numpy matplotlib seaborn scikit-learn tensorflow
+```
+
+## How to Run
+
+Run any task from the project root directory.
+
+### Level 1
+
+```bash
+python level1_task1_data_preprocessing.py
+python level1_task2_linear_regression.py
+python level1_task3_knn_classifier.py
+```
+
+### Level 2
+
+```bash
+python level2_task1_logistic_regression.py
+python level2_task2_decision_tree_classification.py
+python level2_task3_kmeans_clustring.py
+```
+
+### Level 3
+
+```bash
+python level3_task1_random_forest_classifier.py
+python level3_task2_svm_classification.py
+python level3_task3_neural_network_keras.py
+```
+
+If your terminal uses `python3`, run:
+
+```bash
+python3 level3_task3_neural_network_keras.py
+```
+
+## Requirements
+
+Main Python libraries:
+
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- tensorflow
+
+Install them with:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn tensorflow
+```
+
+## Notes
+
+TensorFlow may print informational messages such as:
+
+```text
+oneDNN custom operations are on
+```
+
+This is not an error. It only means TensorFlow is using CPU optimizations. The script can run normally.
+
+To hide this message, add the following lines before importing TensorFlow:
+
+```python
+import os
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+```
+
+## Author
+
+Prepared as part of a Machine Learning internship project.
